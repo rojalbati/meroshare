@@ -22,9 +22,17 @@ npm install
 npx cypress run
 ```
 
-## Github Actions 
+## Github Actions
+### Pre-requisite
+- Fork the project
+
 ### Personal
-Ensure these repository secrets are upto date (If it doesn't exist, simply create)
+- Goto "settings"
+- Click "Secrets"
+- Click "Actions"
+<img width="1184" alt="image" src="https://user-images.githubusercontent.com/54777753/190578269-b95a9736-119a-4889-a5c8-a023f8f3f6fb.png">
+
+- Add these repository secrets
 1. MY_DEPOSITORY_PARTICIPANTS
 2. MY_USERNAME
 3. MY_PASSWORD
@@ -32,10 +40,15 @@ Ensure these repository secrets are upto date (If it doesn't exist, simply creat
 5. MY_CRN
 6. MY_PIN
 
-Visit workflow "Apply Share: Personal" and run Workflow
+- Ensure repository secrets are added
+<img width="785" alt="image" src="https://user-images.githubusercontent.com/54777753/190580010-48870d39-7724-46f3-84f4-2a8b951cad28.png">
+
+- Visit workflow "Apply Share: Personal" and run Workflow
+<img width="1338" alt="image" src="https://user-images.githubusercontent.com/54777753/190580114-4cc15a1d-08d3-484b-9967-7499ab88abf4.png">
+
 
 ### Family
-Ensure these repository secrets are upto date (If it doesn't exist, simply create)
+- Ensure these repository secrets are present (If not, add these repository secrets)
 1. MY_DEPOSITORY_PARTICIPANTS
 2. MY_USERNAME
 3. MY_PASSWORD
@@ -55,4 +68,4 @@ Ensure these repository secrets are upto date (If it doesn't exist, simply creat
 17. MOM_CRN
 18. MOM_PIN
 
-Visit workflow "Apply Share: Family" and run Workflow
+- Visit workflow "Apply Share: Family" and run Workflow
