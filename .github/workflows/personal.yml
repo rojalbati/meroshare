@@ -1,0 +1,39 @@
+name: "Apply Share: Personal"
+
+on:
+
+  workflow_dispatch:
+    inputs:
+      KITTA:
+        description: Choose no. of KITTA to Apply
+        required: true
+        default: "10"
+        
+jobs:
+
+  for_me:
+    name: Me
+    runs-on: ubuntu-20.04
+    strategy:
+      fail-fast: false
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
+        with:
+          spec: cypress/e2e/1-getting-started/meroshare.cy.js
+        env:
+          CYPRESS_DEPOSITORY_PARTICIPANTS: ${{ secrets.MY_DEPOSITORY_PARTICIPANTS }}
+          CYPRESS_USERNAME: ${{ secrets.MY_USERNAME }}
+          CYPRESS_PASSWORD: ${{ secrets.MY_PASSWORD }}
+          CYPRESS_BANK: ${{ secrets.MY_BANK }}
+          CYPRESS_KITTA: ${{ github.event.inputs.KITTA }}
+          CYPRESS_CRN: ${{ secrets.MY_CRN }}
+          CYPRESS_PIN: ${{ secrets.MY_PIN }}
+      - name: Save screenshot
+        uses: actions/upload-artifact@v2
+        with:
+          name: screenshot_me
+          path: cypress/screenshots
+          retention-days: 10
