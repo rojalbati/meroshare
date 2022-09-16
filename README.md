@@ -33,7 +33,7 @@ Ensure these repository secrets are upto date (If it doesn't exist, simply creat
 6. MY_PIN
 
 Visit workflow and run workflow:
-https://github.com/rojalbati-cf/meroshare/actions/workflows/personal.yml
+https://github.com/rojalbati/meroshare/actions/workflows/personal.yml
 
 ### Family
 Ensure these repository secrets are upto date (If it doesn't exist, simply create)
@@ -57,4 +57,4 @@ Ensure these repository secrets are upto date (If it doesn't exist, simply creat
 18. MOM_PIN
 
 Visit workflow and run:
-https://github.com/rojalbati-cf/meroshare/actions/workflows/family.yml
+https://github.com/rojalbati/meroshare/actions/workflows/family.yml
