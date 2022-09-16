@@ -32,8 +32,7 @@ Ensure these repository secrets are upto date (If it doesn't exist, simply creat
 5. MY_CRN
 6. MY_PIN
 
-Visit workflow and run:
-https://github.com/rojalbati/meroshare/actions/workflows/personal.yml
+Visit workflow "Apply Share: Personal" and run Workflow
 
 ### Family
 Ensure these repository secrets are upto date (If it doesn't exist, simply create)
@@ -56,5 +55,4 @@ Ensure these repository secrets are upto date (If it doesn't exist, simply creat
 17. MOM_CRN
 18. MOM_PIN
 
-Visit workflow and run:
-https://github.com/rojalbati/meroshare/actions/workflows/family.yml
+Visit workflow "Apply Share: Family" and run Workflow
