@@ -7,7 +7,7 @@ Meroshare is Cypress automation that applies share (Ordinary Share).
 1. Clone the repository
 
 ```
-git clone git@github.com:rojalbati-cf/meroshare.git
+git clone git@github.com:rojalbati/meroshare.git
 ```
 
 2. In `cypress.config.js`, set the value of Environment Variables
