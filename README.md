@@ -30,7 +30,7 @@ npx cypress run
 - Goto "settings"
 - Click "Secrets"
 - Click "Actions"
-<img width="1184" alt="image" src="https://user-images.githubusercontent.com/54777753/190578269-b95a9736-119a-4889-a5c8-a023f8f3f6fb.png">
+<img width="1204" alt="image" src="https://user-images.githubusercontent.com/54777753/190581093-d12838a7-b969-4e21-ad23-95bb1508a6f2.png">
 
 - Add these repository secrets
 1. MY_DEPOSITORY_PARTICIPANTS
@@ -40,7 +40,7 @@ npx cypress run
 5. MY_CRN
 6. MY_PIN
 
-- Ensure repository secrets are added
+- Ensure repository secrets are added under "Repository secrets" Section
 <img width="785" alt="image" src="https://user-images.githubusercontent.com/54777753/190580010-48870d39-7724-46f3-84f4-2a8b951cad28.png">
 
 - Visit workflow "Apply Share: Personal" and run Workflow
