@@ -32,7 +32,7 @@ Ensure these repository secrets are upto date (If it doesn't exist, simply creat
 5. MY_CRN
 6. MY_PIN
 
-Visit workflow and run workflow:
+Visit workflow and run:
 https://github.com/rojalbati/meroshare/actions/workflows/personal.yml
 
 ### Family
