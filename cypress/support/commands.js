@@ -23,9 +23,10 @@ Cypress.Commands.add('apply', (bank, kitta, crn, pin) => {
 
         const shareType = $el.find('span.isin').text()
         const shareName = $el.find('span[tooltip="Company Name"]').text()
+        const appliedButton = $el.find('.btn-issue').text()
 
-        if (shareType.includes('Ordinary Shares')) {
-            cy.task("log", `${shareName}`)
+        if (shareType.includes('Ordinary Shares') && appliedButton.includes('Apply')) {
+            cy.task("log", `Applying ${shareName} share`)
             $el.find('.btn-issue').click()
 
             cy.task("log", "Selecting Bank")
@@ -44,6 +45,10 @@ Cypress.Commands.add('apply', (bank, kitta, crn, pin) => {
             cy.get('.confirm-page-btn > .btn-primary').click()
             cy.contains('Share has been applied successfully')
 
+        } else if (!shareType.includes('Ordinary Shares')) {
+            cy.task("log", `${shareName} share is not an Ordinary Share`)
+        } else if (appliedButton.includes('Edit')) {
+            cy.task("log", `${shareName} share is already applied`)
         }
 
     })
