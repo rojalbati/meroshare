@@ -2,29 +2,10 @@
 
 Meroshare is Cypress automation that applies share (Ordinary Share).
 
-## Installation: Locally
-
-1. Clone the repository
-
-```
-git clone git@github.com:rojalbati/meroshare.git
-```
-
-2. In `cypress.config.js`, set the value of Environment Variables
-
-3. Install dependencies
-```
-npm install
-```
-
-4. Apply Share
-```
-npx cypress run
-```
-
 ## Github Actions
 ### Pre-requisite
-- Fork the project
+- Create a private repository and name it "meroshare"
+- Import code using this url https://github.com/rojalbati/meroshare
 
 ### Personal
 - Goto "settings"
@@ -69,3 +50,25 @@ npx cypress run
 18. MOM_PIN
 
 - Visit workflow "Apply Share: Family" and run Workflow
+
+
+## Installation: Locally
+
+1. Clone the repository
+
+```
+git clone git@github.com:rojalbati/meroshare.git
+```
+
+2. In `cypress.config.js`, set the value of Environment Variables
+
+3. Install dependencies
+```
+npm install
+```
+
+4. Apply Share
+```
+npx cypress run
+```
+
