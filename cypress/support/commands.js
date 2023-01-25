@@ -30,7 +30,7 @@ Cypress.Commands.add('apply', (bank, kitta, crn, pin) => {
             $el.find('.btn-issue').click()
 
             cy.task("log", "Selecting Bank")
-            cy.get('#selectBank').select(bank, { log: false })
+            cy.get('#selectBank').select(1, { log: false })
             cy.task("log", `Applying ${kitta} kitta`)
             cy.get('#appliedKitta').type(kitta)
             cy.task("log", "Typing CRN number")
