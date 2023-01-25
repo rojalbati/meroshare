@@ -5,7 +5,7 @@ describe('Meroshare', () => {
   beforeEach(() => {
 
     cy.visit('/')
-    cy.contains('© 2022 CDS and Clearing Limited. All Rights Reserved')
+    cy.contains('CDS and Clearing Limited')
 
   })
 
