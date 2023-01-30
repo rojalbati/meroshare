@@ -17,9 +17,8 @@ Meroshare is Cypress automation that applies share (Ordinary Share).
 1. MY_DEPOSITORY_PARTICIPANTS
 2. MY_USERNAME
 3. MY_PASSWORD
-4. MY_BANK
-5. MY_CRN
-6. MY_PIN
+4. MY_CRN
+5. MY_PIN
 
 - Ensure repository secrets are added under "Repository secrets" Section
 <img width="785" alt="image" src="https://user-images.githubusercontent.com/54777753/190580010-48870d39-7724-46f3-84f4-2a8b951cad28.png">
@@ -33,21 +32,18 @@ Meroshare is Cypress automation that applies share (Ordinary Share).
 1. MY_DEPOSITORY_PARTICIPANTS
 2. MY_USERNAME
 3. MY_PASSWORD
-4. MY_BANK
-5. MY_CRN
-6. MY_PIN
-7. DAD_DEPOSITORY_PARTICIPANTS
-8. DAD_USERNAME
-9. DAD_PASSWORD
-10. DAD_BANK
-11. DAD_CRN
-12. DAD_PIN
-13. MOM_DEPOSITORY_PARTICIPANTS
-14. MOM_USERNAME
-15. MOM_PASSWORD
-16. MOM_BANK
-17. MOM_CRN
-18. MOM_PIN
+4. MY_CRN
+5. MY_PIN
+6. DAD_DEPOSITORY_PARTICIPANTS
+7. DAD_USERNAME
+8. DAD_PASSWORD
+9. DAD_CRN
+10. DAD_PIN
+11. MOM_DEPOSITORY_PARTICIPANTS
+12. MOM_USERNAME
+13. MOM_PASSWORD
+14. MOM_CRN
+15. MOM_PIN
 
 - Visit workflow "Apply Share: Family" and run Workflow
 
