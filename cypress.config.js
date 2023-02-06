@@ -20,6 +20,9 @@ module.exports = defineConfig({
         },
       })
     },
+    retries: {
+      "runMode": 2
+    },
     baseUrl: 'https://meroshare.cdsc.com.np'
   },
 });
