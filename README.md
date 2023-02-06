@@ -14,11 +14,11 @@ Meroshare is Cypress automation that applies share (Ordinary Share).
 <img width="1204" alt="image" src="https://user-images.githubusercontent.com/54777753/190581093-d12838a7-b969-4e21-ad23-95bb1508a6f2.png">
 
 - Add these repository secrets
-1. MY_DEPOSITORY_PARTICIPANTS
-2. MY_USERNAME
-3. MY_PASSWORD
-4. MY_CRN
-5. MY_PIN
+1. MY_DEPOSITORY_PARTICIPANTS [Ex: 13200]
+2. MY_USERNAME [Ex: 00817540]
+3. MY_PASSWORD [Ex: IamPassword]
+4. MY_CRN [Ex: 23098432432]
+5. MY_PIN [Ex: 3813]
 
 - Ensure repository secrets are added under "Repository secrets" Section
 <img width="785" alt="image" src="https://user-images.githubusercontent.com/54777753/190580010-48870d39-7724-46f3-84f4-2a8b951cad28.png">
