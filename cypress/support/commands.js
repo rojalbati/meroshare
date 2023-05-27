@@ -26,7 +26,7 @@ Cypress.Commands.add('apply', (bank, kitta, crn, pin) => {
         const shareName = $el.find('span[tooltip="Company Name"]').text()
         const appliedButton = $el.find('.btn-issue').text()
 
-        if (shareType.includes('IPO') && shareGroup.includes('Ordinary Shares') && appliedButton.includes('Apply')) {
+        if ((shareType.includes('IPO') || shareType.includes('FPO')) && shareGroup.includes('Ordinary Shares') && appliedButton.includes('Apply')) {
             cy.task("log", `Applying ${shareName} share`)
             $el.find('.btn-issue').click()
 
@@ -46,8 +46,8 @@ Cypress.Commands.add('apply', (bank, kitta, crn, pin) => {
             cy.get('.confirm-page-btn > .btn-primary').click()
             cy.contains('Share has been applied successfully')
 
-        } else if (!shareType.includes('IPO')) {
-            cy.task("log", `${shareName} share is not an IPO`)
+        } else if (!(shareType.includes('IPO') || shareType.includes('FPO'))) {
+            cy.task("log", `${shareName} share is not an IPO/ FPO`)
         } else if (!shareGroup.includes('Ordinary Shares')) {
             cy.task("log", `${shareName} share is not an Ordinary Share`)
         } else if (appliedButton.includes('Edit')) {
