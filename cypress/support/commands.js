@@ -21,19 +21,19 @@ Cypress.Commands.add('apply', (bank, kitta, crn, pin) => {
     cy.task("log", "Applying 'Ordinary Share'")
     cy.get('.company-list').each(($el, index, $list) => {
 
-        const shareType = $el.find('.share-of-type').text()
-        const shareGroup = $el.find('span.isin').text()
+        const shareType = $el.find('span.isin').text()
         const shareName = $el.find('span[tooltip="Company Name"]').text()
         const appliedButton = $el.find('.btn-issue').text()
 
-        if ((shareType.includes('IPO') || shareType.includes('FPO')) && shareGroup.includes('Ordinary Shares') && appliedButton.includes('Apply')) {
+        if (shareType.includes('Ordinary Shares') && (appliedButton.includes('Reapply') || appliedButton.includes('Apply'))) {
             cy.task("log", `Applying ${shareName} share`)
             $el.find('.btn-issue').click()
 
             cy.task("log", "Selecting Bank")
             cy.get('#selectBank').select(1, { log: false })
+            cy.get('#accountNumber').select(1, { log: false })
             cy.task("log", `Applying ${kitta} kitta`)
-            cy.get('#appliedKitta').type(kitta)
+            cy.get('#appliedKitta').clear().type(kitta)
             cy.task("log", "Typing CRN number")
             cy.get('#crnNumber').type(crn, { log: false })
             cy.task("log", "Checking disclaimer")
@@ -43,12 +43,10 @@ Cypress.Commands.add('apply', (bank, kitta, crn, pin) => {
             cy.task("log", "Typing transaction PIN")
             cy.get('#transactionPIN').type(pin, { log: false })
 
-            cy.get('.confirm-page-btn > .btn-primary').click()
+            cy.get('.btn-primary').contains('Apply').click()
             cy.contains('Share has been applied successfully')
 
-        } else if (!(shareType.includes('IPO') || shareType.includes('FPO'))) {
-            cy.task("log", `${shareName} share is not an IPO/ FPO`)
-        } else if (!shareGroup.includes('Ordinary Shares')) {
+        } else if (!shareType.includes('Ordinary Shares')) {
             cy.task("log", `${shareName} share is not an Ordinary Share`)
         } else if (appliedButton.includes('Edit')) {
             cy.task("log", `${shareName} share is already applied`)
