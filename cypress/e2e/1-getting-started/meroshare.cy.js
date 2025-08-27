@@ -3,9 +3,15 @@
 describe('Meroshare', () => {
 
   beforeEach(() => {
+    // Clear all cookies, local storage, and session storage
+    cy.clearCookies()
+    cy.clearLocalStorage()
+    cy.window().then((win) => {
+      win.sessionStorage.clear()
+    })
 
     cy.visit('/')
-    cy.contains('CDS and Clearing Limited')
+    cy.contains('CDS and Clearing Limited. All Rights Reserved')
 
   })
 
